@@ -20,7 +20,12 @@ public abstract class AbstractRepository<U, T extends IEntity<U>> implements IRe
 
     @Override
     public void update(T entity) {
-
+        if (entity.getId() == null)
+            throw new RuntimeException("Id can't be null");
+        T flag = map.get(entity.getId());
+        if (flag == null)
+            throw new IllegalArgumentException("Object is null");
+        map.put(entity.getId(), entity);
     }
 
     @Override
