@@ -17,6 +17,7 @@ public class Main {
         NumericIdGenerator numericIdGenerator = new NumericIdGenerator();
         IRepository<String, User> userRepository = new UserRepository(stringIdGenerator);
         AbstractRepository<Long, Person> personRepository = new PersonRepository(numericIdGenerator);
+
         User user1 = new User();
         user1.setName("mahbobeh");
         userRepository.save(user1);
@@ -26,6 +27,15 @@ public class Main {
         person.setName("reihaneh");
         personRepository.save(person);
         System.out.println(personRepository.load(person.getId()));
+
+        Person person1 = new Person();
+        person1.setName("maryam");
+        personRepository.save(person1);
+        System.out.println(personRepository.load(person1.getId()));
+
+        //personRepository.delete(person.getId());
+        System.out.println(personRepository.loadAll());
+
         try {
             System.out.println(personRepository.load(12L));
         } catch (IllegalArgumentException e) {
