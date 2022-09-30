@@ -1,8 +1,8 @@
 package ir.javacup.db;
 
-public class Person extends AbstractRepository implements IEntity {
+public class Person implements IEntity<Long> {
 
-    private int id;
+    private Long id;
 
     private String name;
 
@@ -15,12 +15,12 @@ public class Person extends AbstractRepository implements IEntity {
     }
 
     @Override
-    public void setId(Object id) {
-        this.id = (Integer) id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override
-    public Object getId() {
+    public Long getId() {
         return null;
     }
 

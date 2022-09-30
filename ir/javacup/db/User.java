@@ -1,6 +1,6 @@
 package ir.javacup.db;
 
-public class User extends AbstractRepository implements IEntity {
+public class User implements IEntity<String> {
 
     private String id;
     private String name;
@@ -14,12 +14,13 @@ public class User extends AbstractRepository implements IEntity {
     }
 
     @Override
-    public void setId(Object id) {
-        this.id = (String) id;
+    public void setId(String id) {
+
     }
 
     @Override
-    public Object getId() {
+    public String getId() {
         return id;
     }
+
 }

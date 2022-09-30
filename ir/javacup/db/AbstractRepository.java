@@ -10,6 +10,10 @@ public abstract class AbstractRepository<U, T extends IEntity<U>> implements IRe
     private Map<U, T> map = new HashMap<>();
     private IdGenerator<U> idGenerator;
 
+    public AbstractRepository(IdGenerator<U> idGenerator) {
+        this.idGenerator = idGenerator;
+    }
+
     @Override
     public void save(T entity) {
         if (entity == null)
