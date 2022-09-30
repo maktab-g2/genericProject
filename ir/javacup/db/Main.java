@@ -1,5 +1,15 @@
 package ir.javacup.db;
 
+import ir.javacup.db.entity.Person;
+import ir.javacup.db.entity.User;
+import ir.javacup.db.entity.abstracts.AbstractRepository;
+import ir.javacup.db.repository.PersonRepository;
+import ir.javacup.db.repository.UserRepository;
+import ir.javacup.db.service.NumericIdGenerator;
+import ir.javacup.db.service.StringIdGenerator;
+import ir.javacup.db.service.interfaces.IRepository;
+import ir.javacup.db.service.interfaces.IdGenerator;
+
 public class Main {
     public static void main(String[] args) {
 

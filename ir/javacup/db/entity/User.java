@@ -1,9 +1,10 @@
-package ir.javacup.db;
+package ir.javacup.db.entity;
 
-public class Person implements IEntity<Long> {
+import ir.javacup.db.service.interfaces.IEntity;
 
-    private Long id;
+public class User implements IEntity<String> {
 
+    private String id;
     private String name;
 
     public String getName() {
@@ -15,19 +16,22 @@ public class Person implements IEntity<Long> {
     }
 
     @Override
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
     @Override
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "User{" +
                 "name='" + name + '\'' +
                 '}';
     }
 }
+
+
+

@@ -1,4 +1,8 @@
-package ir.javacup.db;
+package ir.javacup.db.entity.abstracts;
+
+import ir.javacup.db.service.interfaces.IEntity;
+import ir.javacup.db.service.interfaces.IRepository;
+import ir.javacup.db.service.interfaces.IdGenerator;
 
 import java.util.ArrayList;
 import java.util.HashMap;

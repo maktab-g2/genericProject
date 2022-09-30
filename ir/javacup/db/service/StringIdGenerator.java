@@ -1,4 +1,6 @@
-package ir.javacup.db;
+package ir.javacup.db.service;
+
+import ir.javacup.db.service.interfaces.IdGenerator;
 
 import java.nio.charset.Charset;
 import java.util.Random;

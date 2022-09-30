@@ -1,4 +1,4 @@
-package ir.javacup.db;
+package ir.javacup.db.service.interfaces;
 
 public interface IEntity<I> {
 

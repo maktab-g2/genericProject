@@ -1,4 +1,4 @@
-package ir.javacup.db;
+package ir.javacup.db.service.interfaces;
 
 import java.util.List;
 
