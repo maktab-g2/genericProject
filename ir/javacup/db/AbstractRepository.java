@@ -45,7 +45,9 @@ public abstract class AbstractRepository<U, T extends IEntity<U>> implements IRe
 
     @Override
     public void delete(U id) {
-
+        T result = map.remove(id);
+        if (result == null)
+            throw new RuntimeException("value doesn't exist");
     }
 
     @Override
