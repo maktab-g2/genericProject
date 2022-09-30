@@ -1,5 +1,6 @@
 package ir.javacup.db;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +36,11 @@ public abstract class AbstractRepository<U, T extends IEntity<U>> implements IRe
 
     @Override
     public List<T> loadAll() {
-        return null;
+        List<T> list = new ArrayList<>();
+        for (Map.Entry<U, T> entry : map.entrySet()) {
+            list.add(entry.getValue());
+        }
+        return list;
     }
 
     @Override
