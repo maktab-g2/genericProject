@@ -52,6 +52,6 @@ public abstract class AbstractRepository<U, T extends IEntity<U>> implements IRe
 
     @Override
     public void deleteAll() {
-
+        map.clear();
     }
 }
