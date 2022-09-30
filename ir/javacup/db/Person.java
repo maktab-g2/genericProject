@@ -21,8 +21,13 @@ public class Person implements IEntity<Long> {
 
     @Override
     public Long getId() {
-        return null;
+        return id;
     }
 
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

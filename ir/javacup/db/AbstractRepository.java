@@ -35,6 +35,8 @@ public abstract class AbstractRepository<U, T extends IEntity<U>> implements IRe
 
     @Override
     public T load(U id) {
+        if (map.get(id) == null)
+            throw new IllegalArgumentException("Object is null");
         return map.get(id);
     }
 

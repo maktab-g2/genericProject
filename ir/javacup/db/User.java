@@ -15,7 +15,7 @@ public class User implements IEntity<String> {
 
     @Override
     public void setId(String id) {
-
+        this.id = id;
     }
 
     @Override
@@ -23,4 +23,13 @@ public class User implements IEntity<String> {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
+
+
+
