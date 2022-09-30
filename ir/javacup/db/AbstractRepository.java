@@ -30,7 +30,7 @@ public abstract class AbstractRepository<U, T extends IEntity<U>> implements IRe
 
     @Override
     public T load(U id) {
-        return null;
+        return map.get(id);
     }
 
     @Override
